@@ -74,64 +74,64 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// স্ক্রল অ্যানিমেশন (Intersection Observer)
-document.addEventListener("DOMContentLoaded", () => {
-  // শুধুমাত্র .card ক্লাস এবং revael-left বা revael-right ক্লাসযুক্ত কার্ডগুলি নির্বাচন করা
-  const cardsToAnimate = document.querySelectorAll(
-    ".card.revael-left, .card.revael-right"
-  );
+// // স্ক্রল অ্যানিমেশন (Intersection Observer)
+// document.addEventListener("DOMContentLoaded", () => {
+//   // শুধুমাত্র .card ক্লাস এবং revael-left বা revael-right ক্লাসযুক্ত কার্ডগুলি নির্বাচন করা
+//   const cardsToAnimate = document.querySelectorAll(
+//     ".card.revael-left, .card.revael-right"
+//   );
 
-  const observerOptions = {
-    root: null, // ভিউপোর্টকে রুট হিসেবে ব্যবহার করা
-    rootMargin: "0px",
-    threshold: 0.2, // যখন কার্ডের 20% দেখা যাবে, তখন মোশন ট্রিগার হবে
-  };
+//   const observerOptions = {
+//     root: null, // ভিউপোর্টকে রুট হিসেবে ব্যবহার করা
+//     rootMargin: "0px",
+//     threshold: 0.2, // যখন কার্ডের 20% দেখা যাবে, তখন মোশন ট্রিগার হবে
+//   };
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        // যখন কার্ডটি ভিউপোর্টে প্রবেশ করবে, তখন is-visible ক্লাস যোগ হবে
-        entry.target.classList.add("is-visible");
+//   const observer = new IntersectionObserver((entries, observer) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         // যখন কার্ডটি ভিউপোর্টে প্রবেশ করবে, তখন is-visible ক্লাস যোগ হবে
+//         entry.target.classList.add("is-visible");
 
-        // একবার অ্যানিমেশন হয়ে গেলে অবজার্ভ করা বন্ধ করে দিন (ঐচ্ছিক)
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
+//         // একবার অ্যানিমেশন হয়ে গেলে অবজার্ভ করা বন্ধ করে দিন (ঐচ্ছিক)
+//         observer.unobserve(entry.target);
+//       }
+//     });
+//   }, observerOptions);
 
-  // প্রতিটি কার্ডকে অবজার্ভারে যুক্ত করা
-  cardsToAnimate.forEach((card) => {
-    observer.observe(card);
-  });
-});
+//   // প্রতিটি কার্ডকে অবজার্ভারে যুক্ত করা
+//   cardsToAnimate.forEach((card) => {
+//     observer.observe(card);
+//   });
+// });
 
 //  অ্যাবাউট সেকশনের কার্ডগুলির জন্য স্ক্রল অ্যানিমেশন
 
-document.addEventListener("DOMContentLoaded", () => {
-  // এখন আমরা Service এবং About সেকশনের কার্ডগুলিকে একসাথে সিলেক্ট করছি
-  const cards = document.querySelectorAll(".service-card, .about-card");
+// document.addEventListener("DOMContentLoaded", () => {
+//   // এখন আমরা Service এবং About সেকশনের কার্ডগুলিকে একসাথে সিলেক্ট করছি
+//   const cards = document.querySelectorAll(".service-card, .about-card");
 
-  const observerOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.1,
-  };
+//   const observerOptions = {
+//     root: null,
+//     rootMargin: "0px",
+//     threshold: 0.1,
+//   };
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        // যখন কার্ডটি ভিউপোর্টে আসবে, তখন 'is-visible' ক্লাস যোগ হবে
-        entry.target.classList.add("is-visible");
-        // একবার অ্যানিমেশন হয়ে গেলে অবজার্ভ করা বন্ধ করে দিন
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
+//   const observer = new IntersectionObserver((entries, observer) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         // যখন কার্ডটি ভিউপোর্টে আসবে, তখন 'is-visible' ক্লাস যোগ হবে
+//         entry.target.classList.add("is-visible");
+//         // একবার অ্যানিমেশন হয়ে গেলে অবজার্ভ করা বন্ধ করে দিন
+//         observer.unobserve(entry.target);
+//       }
+//     });
+//   }, observerOptions);
 
-  cards.forEach((card) => {
-    observer.observe(card);
-  });
-});
+//   cards.forEach((card) => {
+//     observer.observe(card);
+//   });
+// });
 let slideIndex = 0;
 showSlides();
 
@@ -151,5 +151,5 @@ function showSlides() {
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
 }

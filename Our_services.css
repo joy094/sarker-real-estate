@@ -1,6 +1,6 @@
 #services h2 {
   margin-top: 35px;
-  text-align: center;
+
   margin-bottom: 20px;
   background: linear-gradient(90deg, #0066ff, #00d4ff);
   -webkit-background-clip: text;
@@ -18,12 +18,14 @@
   text-align: center;
   font-weight: 500;
 
-  height: 400px;
-  width: 300px;
+  height: 500px;
+  width: 400px;
   max-width: 100%;
   background: #ffffff;
-  box-shadow: 0 12px 24px rgba(7, 74, 99, 0.12),
-    0 8px 16px rgba(7, 74, 99, 0.08), 0 4px 8px rgba(7, 74, 99, 0.05);
+  box-shadow:
+    0 12px 24px rgba(7, 74, 99, 0.12),
+    0 8px 16px rgba(7, 74, 99, 0.08),
+    0 4px 8px rgba(7, 74, 99, 0.05);
 
   margin: 5px 0px;
   padding: 10px;
@@ -43,9 +45,9 @@
 .services_list div img {
   border-radius: 8px;
   margin-top: 10px;
-  height: 280px;
-  width: 100%;
-  object-fit: cover;
+  height: 450px;
+  width: 350px;
+  /* object-fit: cover; */
 }
 .services_list div:hover img {
   transform: scale(1.05);
@@ -56,9 +58,12 @@
 
 /* প্রাথমিক লুকানো অবস্থা (সকল অ্যানিমেটেড কার্ডের জন্য) */
 /* .card ক্লাসটি আপনি সার্ভিস সেকশনে ব্যবহার করেছেন */
+
+/* প্রথমে কার্ড অদৃশ্য থাকবে */
 #services .card {
-  opacity: 0; /* প্রথমে কার্ড অদৃশ্য থাকবে */
-  transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  opacity: 0;
+  transition:
+    transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* মসৃণ অ্যানিমেশনের জন্য ট্রানজিশন */
 }
 
@@ -109,8 +114,10 @@
   width: 250px;
   max-width: 100%;
   background: #ffffff;
-  box-shadow: 0 12px 24px rgba(7, 74, 99, 0.12),
-    0 8px 16px rgba(7, 74, 99, 0.08), 0 4px 8px rgba(7, 74, 99, 0.05);
+  box-shadow:
+    0 12px 24px rgba(7, 74, 99, 0.12),
+    0 8px 16px rgba(7, 74, 99, 0.08),
+    0 4px 8px rgba(7, 74, 99, 0.05);
 
   margin: 5px 0px;
   padding: 10px;
@@ -130,7 +137,9 @@
 .about-card {
   /* (আপনার অন্যান্য স্টাইল যেমন padding, background, border) */
   opacity: 0; /* কার্ডটি প্রথমে অদৃশ্য থাকবে */
-  transition: transform 1s ease-out, opacity 1s ease-out; /* মসৃণ ট্রানজিশন */
+  transition:
+    transform 1s ease-out,
+    opacity 1s ease-out; /* মসৃণ ট্রানজিশন */
 }
 
 /* বাম থেকে আসার জন্য (slide-left) - প্রাথমিক অবস্থান বাম দিকে সরিয়ে রাখা */
@@ -201,7 +210,9 @@
   width: 80%; /* মোবাইল ডিভাইসের জন্য */
   max-width: 500px; /* ডেস্কটপের জন্য সর্বাধিক প্রস্থ */
   border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: relative;
 }
 
@@ -243,10 +254,15 @@
   }
 
   .services_list div {
-    width: 90%;
-    margin: 10px 0;
-  }
+    width: 100%;
+    padding: 0;
 
+    margin: 50px 0;
+  }
+  .services_list div img {
+    width: 100%;
+    height: 100%;
+  }
   .manage_team {
     flex-direction: column;
     align-items: center;
