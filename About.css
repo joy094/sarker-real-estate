@@ -24,18 +24,14 @@
   width: 47%;
   /* max-width: 100%; */
   background: #ffffff;
-  box-shadow: 0 12px 24px rgba(7, 74, 99, 0.12),
-    0 8px 16px rgba(7, 74, 99, 0.08), 0 4px 8px rgba(7, 74, 99, 0.05);
+  box-shadow:
+    0 12px 24px rgba(7, 74, 99, 0.12),
+    0 8px 16px rgba(7, 74, 99, 0.08),
+    0 4px 8px rgba(7, 74, 99, 0.05);
 
   border-radius: 8px;
   padding: 20px;
 }
-
-
-
-
-
-
 
 footer {
   display: flex;
@@ -46,8 +42,6 @@ footer {
 
   text-align: center;
   padding: 10px 20px;
-
-  bottom: 0;
 
   height: 150px;
   border-radius: 8px;
@@ -174,11 +168,12 @@ footer a {
     font-size: 15px;
   }
   footer p {
-    font-size: 11px;
+    font-size: 15px;
     margin-top: 8px;
   }
 
   footer {
-    height: 100px;
+    height: 180px;
+    margin-bottom: 100px;
   }
 }

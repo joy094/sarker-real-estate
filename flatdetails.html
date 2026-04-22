@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ফ্ল্যাট ডিটেইলস | marooj real estate</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="Our_services.css" />
+    <link rel="stylesheet" href="Contact.css" />
+    <link rel="stylesheet" href="About.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Orbitron:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ডিটেইলস পেজের জন্য অতিরিক্ত কিছু স্টাইল */
+
+      * {
+        font-family: "Tiro Bangla", serif;
+      }
+      body {
+        font-family: "Tiro Bangla", serif;
+        background-color: #f9f9f9;
+
+        margin-top: 100px;
+      }
+      .details-container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 2fr 1.2fr;
+        gap: 30px;
+      }
+
+      .main-img img {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .info-section {
+        background: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+      .info-section h1 {
+        color: #2c3e50;
+        margin-top: 0;
+      }
+
+      .amenities-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin: 25px 0;
+      }
+      .amenity-card {
+        text-align: center;
+        padding: 15px;
+        background: #fdfdfd;
+        border: 1px solid #eee;
+        border-radius: 10px;
+      }
+      .amenity-card i {
+        font-size: 24px;
+        color: #27ae60;
+        margin-bottom: 8px;
+      }
+      .amenity-card p {
+        margin: 0;
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      .price-tag {
+        font-size: 22px;
+        color: #e67e22;
+        font-weight: bold;
+        margin-bottom: 20px;
+        display: block;
+      }
+
+      .booking-sidebar {
+        background: #2c3e50;
+        color: #fff;
+        padding: 25px;
+        border-radius: 15px;
+        height: fit-content;
+        position: sticky;
+        top: 100px;
+      }
+      .booking-sidebar input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: none;
+      }
+      .submit-btn {
+        width: 100%;
+        padding: 12px;
+        background: #27ae60;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .details-container {
+          grid-template-columns: 1fr;
+          margin-top: 10px;
+        }
+        .amenities-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="page_header">
+      <a class="logo" href="#" aria-label="Hajj site logo">
+        <img src="./img/marooj_logo2.jpeg" alt="logo" />
+      </a>
+
+      <nav>
+        <div class="humberger" id="humberger">
+          <!-- হামবার্গার আইকনে ক্লিক করার পর এখানে  ul class - show add হচ্ছে,তখনই এর ভিতরে css override-->
+
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul id="menu">
+          <li>
+            <a href="./index.html#home" class="active" aria-current="page"
+              >হোম</a
+            >
+          </li>
+
+          <li><a href="./index.html#services">আমাদের সার্ভিস</a></li>
+          <li><a href="./index.html#contact">যোগাযোগ</a></li>
+          <li><a href="./index.html#about">আমাদের সম্পর্কে</a></li>
+          <li><a href="./flatdetails.html">ফ্ল্যাট</a></li>
+          <li><a href="./index.html#blog">ব্লগ</a></li>
+        </ul>
+      </nav>
+
+      <!-- buttom navigation for mobile device -->
+
+      <nav class="mobile-nav">
+        <div class="nav-container">
+          <a href="#home" class="nav-link">
+            <i class="fa-solid fa-house"></i>
+            <span class="nav-label">হোম</span>
+          </a>
+
+          <a href="https://maps.app.goo.gl/nFkwgXwCo9TnEepg8" class="nav-link">
+            <i class="fa-solid fa-map-location"></i>
+            <span class="nav-label">ভার্চুয়াল ট্যুর</span>
+          </a>
+
+          <div class="center-nav-item">
+            <a
+              href="https://wa.me/+8801728997118"
+              target="_blank"
+              class="floating-btn"
+            >
+              <i class="fa-regular fa-building"></i>
+              <span class="nav-label">বুকিং</span>
+            </a>
+          </div>
+
+          <a
+            href="https://wa.me/+8801728997118"
+            target="_blank"
+            class="nav-link"
+          >
+            <i class="fa-brands fa-whatsapp"> </i>
+            <span class="nav-label">চ্যাট</span>
+          </a>
+
+          <a href="https://www.facebook.com/share/1D6hEzqLBX/" class="nav-link">
+            <i class="fa-brands fa-facebook"></i>
+            <span class="nav-label">পেজ</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="details-container">
+      <section>
+        <div class="main-img">
+          <img src="./img//New_Home_page_photo2.jpeg" alt="Flat Image" />
+        </div>
+
+        <div class="info-section" style="margin-top: 20px">
+          <span class="price-tag">মূল্য: ৳ ৬৫,০০,০০০</span>
+          <h3>লাক্সারি ফ্যামিলি অ্যাপার্টমেন্ট (কেরানীগঞ্জ)</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> দক্ষিণ কেরানীগঞ্জ, ঢাকা (মেইন
+            রোড সংলগ্ন)
+          </p>
+
+          <div class="amenities-grid">
+            <div class="amenity-card">
+              <i class="fas fa-bed"></i>
+              <p>৩ বেডরুম</p>
+            </div>
+            <div class="amenity-card">
+              <i class="fas fa-utensils"></i>
+              <p>১ কিচেন</p>
+            </div>
+            <div class="amenity-card">
+              <i class="fas fa-bath"></i>
+              <p>৩ বাথরুম</p>
+            </div>
+            <div class="amenity-card">
+              <i class="fas fa-expand-arrows-alt"></i>
+              <p>১৩৫০ স্কয়ার ফিট</p>
+            </div>
+            <div class="amenity-card">
+              <i class="fas fa-shield-alt"></i>
+              <p>সিকিউরিটি</p>
+            </div>
+            <div class="amenity-card">
+              <i class="fas fa-car"></i>
+              <p>পার্কিং</p>
+            </div>
+          </div>
+
+          <h3>ফ্ল্যাট ডিজাইন ও ম্যাপ</h3>
+          <img
+            src="./img/flat/flat-cg.jpg.jpeg"
+            style="width: 100%; border-radius: 10px; border: 1px dashed #ccc"
+            alt="Map"
+          />
+        </div>
+      </section>
+
+      <aside>
+        <div class="booking-sidebar">
+          <h3 style="text-align: center">বুকিং এর জন্য ফরম পূরণ করুন</h3>
+          <form action="https://formspree.io/f/mkndldnj" method="POST">
+            <label>আপনার নাম:</label>
+            <input type="text" name="নাম" required placeholder="নাম লিখুন" />
+
+            <label>ফোন নম্বর:</label>
+            <input
+              type="tel"
+              name="ফোন_নম্বর"
+              required
+              placeholder="মোবাইল নম্বর"
+            />
+
+            <button type="submit" class="submit-btn">
+              বুকিং রিকোয়েস্ট পাঠান
+            </button>
+          </form>
+          <div
+            style="
+              margin-top: 20px;
+              text-align: center;
+              border-top: 1px solid #444;
+              padding-top: 15px;
+            "
+          >
+            <p>সরাসরি কল করুন:</p>
+            <a
+              href="tel:+8801728997118"
+              style="
+                color: #27ae60;
+                font-size: 20px;
+                text-decoration: none;
+                font-weight: bold;
+              "
+              >+৮৮০১৭২৮৯৯৭১১৮</a
+            >
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 marooj real estate. All rights reserved.</p>
+
+      <p>
+        Developed by <i class="fab fa-github"></i
+        ><span>
+          <a href="https://github.com/joy094" target="_blank"
+            >Md. Jakaria</a
+          ></span
+        >
+        <!-- GitHub Icon -->
+
+        <i class="fab fa-github"></i>
+      </p>
+    </footer>
+
+    <script>
+      const humberger = document.getElementById("humberger");
+      const menu = document.getElementById("menu");
+
+      humberger.addEventListener("click", () => {
+        menu.classList.toggle("show");
+      });
+
+      // Booking Form Script
+    </script>
+
+    <script src="form.js"></script>
+  </body>
+</html>

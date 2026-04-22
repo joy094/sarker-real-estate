@@ -6,6 +6,8 @@ html,
 body {
   height: 100%;
   /* max-width: 900px; */
+  
+  
 }
 body {
   overflow-x: hidden;
@@ -19,6 +21,7 @@ body {
 
 main {
   margin-top: 150px;
+  
 }
 
 /* ------- Header wrapper with 3D look ------- */
@@ -151,6 +154,19 @@ transform: translateY(-50%); */
   object-fit: cover;
 }
 
+
+.floating-btn {
+    display: flex;
+    flex-direction: column; /* এটি আইকন আর লেখাকে উপর-নিচে রাখবে */
+    align-items: center;    /* মাঝখানে সারিবদ্ধ করবে */
+    justify-content: center;
+    text-decoration: none;
+}
+
+.nav-label {
+    font-size: 12px; /* আপনার প্রয়োজনমতো কমিয়ে বাড়িয়ে নিন */
+    margin-top: 4px; 
+}
 /* text animation */
 
 /* গ্লোয়িং অ্যানিমেশন তৈরি */
@@ -338,6 +354,7 @@ iframe {
   }
 }
 
+
 .nav-container {
   width: 100%;
   max-width: 500px;
@@ -376,23 +393,35 @@ iframe {
 /* Central Floating Button */
 .center-nav-item {
   position: relative;
-  top: -30px; /* উপরে তুলে দেওয়ার জন্য */
+  top: -20px; /* উপরে তুলে দেওয়ার জন্য */
 }
 
 .floating-btn {
-  width: 55px;
-  height: 55px;
+  width: 70px;
+  height: 70px;
   background: var(--primary-color);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 22px;
+  font-size: 25px;
   box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
   border: 5px solid #fff;
   transition: 0.4s;
   text-decoration: none;
+}
+.floating-btn {
+    display: flex;
+    flex-direction: column; /* এটি আইকন আর লেখাকে উপর-নিচে রাখবে */
+    align-items: center;    /* মাঝখানে সারিবদ্ধ করবে */
+    justify-content: center;
+    text-decoration: none;
+}
+
+.nav-label {
+    font-size: 13px; /* আপনার প্রয়োজনমতো কমিয়ে বাড়িয়ে নিন */
+    margin-top: 4px; 
 }
 
 .floating-btn:hover {
