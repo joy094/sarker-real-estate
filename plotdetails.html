@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>প্লট ডিটেইলস | marooj real estate</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="Our_services.css" />
+    <link rel="stylesheet" href="Contact.css" />
+    <link rel="stylesheet" href="About.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Orbitron:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* প্লট ডিটেইলস পেজের জন্য ফ্ল্যাট ডিজাইন স্টাইল */
+
+      * {
+        font-family: "Tiro Bangla", serif;
+      }
+      body {
+        font-family: "Tiro Bangla", serif;
+        background-color: #ecf0f1; /* Flat Light Gray background */
+        margin-top: 100px;
+      }
+      .details-container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 2fr 1.2fr;
+        gap: 30px;
+      }
+
+      .main-img img {
+        width: 100%;
+        border-radius: 4px; /* Flat design consistent sharp/subtle corners */
+        box-shadow: 0 4px 0px rgba(0, 0, 0, 0.05);
+      }
+
+      .info-section {
+        background: #fff;
+        padding: 30px;
+        border-radius: 4px;
+        box-shadow: 0 4px 0px rgba(0, 0, 0, 0.05);
+      }
+
+      .info-section h3 {
+        color: #2c3e50;
+        font-size: 24px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #2980b9;
+        padding-bottom: 8px;
+      }
+
+      /* Flat Grid for Plot Key Features */
+      .amenities-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin: 25px 0;
+      }
+      .amenity-card {
+        text-align: center;
+        padding: 15px;
+        background: #f8f9fa;
+        border: 1px solid #dcdde1;
+        border-radius: 4px;
+      }
+      .amenity-card i {
+        font-size: 24px;
+        color: #2980b9; /* Flat Blue */
+        margin-bottom: 8px;
+      }
+      .amenity-card p {
+        margin: 0;
+        font-weight: bold;
+        font-size: 15px;
+        color: #2c3e50;
+      }
+
+      /* Flat Table for Detailed Specifications */
+      .plot-specs-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background: #ffffff;
+      }
+      .plot-specs-table tr {
+        border-bottom: 1px solid #eeffff;
+      }
+      .plot-specs-table tr:nth-child(even) {
+        background-color: #fcfcfc;
+      }
+      .plot-specs-table td {
+        padding: 12px 15px;
+        font-size: 16px;
+      }
+      .plot-specs-table td.spec-label {
+        font-weight: bold;
+        color: #7f8c8d;
+        width: 40%;
+      }
+      .plot-specs-table td.spec-value {
+        color: #2c3e50;
+      }
+
+      .price-tag {
+        font-size: 26px;
+        color: #ffffff;
+        background-color: #27ae60; /* Flat Green */
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 4px;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+
+      .booking-sidebar {
+        background: #34495e; /* Flat Dark Navy */
+        color: #fff;
+        padding: 25px;
+        border-radius: 4px;
+        height: fit-content;
+        position: sticky;
+        top: 120px;
+        box-shadow: 0 4px 0px rgba(0, 0, 0, 0.05);
+      }
+      .booking-sidebar input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 4px;
+        border: 1px solid #2c3e50;
+        background: #fff;
+        color: #2c3e50;
+      }
+      .submit-btn {
+        width: 100%;
+        padding: 12px;
+        background: #e67e22; /* Flat Orange button */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.2s ease;
+      }
+      .submit-btn:hover {
+        background: #d35400;
+      }
+
+      @media (max-width: 768px) {
+        .details-container {
+          grid-template-columns: 1fr;
+          margin-top: 10px;
+        }
+        .amenities-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="page_header">
+      <a class="logo" href="#" aria-label="Hajj site logo">
+        <img src="./img/marooj_logo2.jpeg" alt="logo" />
+      </a>
+
+      <nav>
+        <div class="humberger" id="humberger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul id="menu">
+          <li>
+            <a href="./index.html#home" class="active" aria-current="page"
+              >হোম</a
+            >
+          </li>
+          <li><a href="./index.html#services">আমাদের সার্ভিস</a></li>
+          <li><a href="./index.html#contact">যোগাযোগ</a></li>
+          <li><a href="./index.html#about">আমাদের সম্পর্কে</a></li>
+          <li><a href="./flatdetails.html">ফ্ল্যাট</a></li>
+          <li><a href="./landshare.html">ল্যান্ড শেয়ার</a></li>
+          <li><a href="./index.html#blog">ব্লগ</a></li>
+        </ul>
+      </nav>
+
+      <!-- bottom navigation for mobile device -->
+      <nav class="mobile-nav">
+        <div class="nav-container">
+          <a href="./index.html#home" class="nav-link">
+            <i class="fa-solid fa-house"></i>
+            <span class="nav-label">হোম</span>
+          </a>
+
+          <a href="https://maps.app.goo.gl/nFkwgXwCo9TnEepg8" class="nav-link">
+            <i class="fa-solid fa-map-location"></i>
+            <span class="nav-label">ভার্চুয়াল ট্যুর</span>
+          </a>
+
+          <div class="center-nav-item">
+            <a
+              href="https://wa.me/+8801728997118"
+              target="_blank"
+              class="floating-btn"
+            >
+              <i class="fa-regular fa-building"></i>
+              <span class="nav-label">বুকিং</span>
+            </a>
+          </div>
+
+          <a
+            href="https://wa.me/+8801728997118"
+            target="_blank"
+            class="nav-link"
+          >
+            <i class="fa-brands fa-whatsapp"> </i>
+            <span class="nav-label">চ্যাট</span>
+          </a>
+
+          <a href="https://www.facebook.com/share/1D6hEzqLBX/" class="nav-link">
+            <i class="fa-brands fa-facebook"></i>
+            <span class="nav-label">পেজ</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="details-container">
+      <section>
+        <!-- প্লটের প্রধান ব্যানার ছবি -->
+        <div class="main-img">
+          <img src="./img/New_Home_page_photo2.jpeg" alt="Plot Image" />
+        </div>
+
+        <div class="info-section" style="margin-top: 20px">
+          <!-- প্রাইস ট্যাগ -->
+          <span class="price-tag">মূল্য: ৳ ৪৫,০০,০০০ (আলোচনা সাপেক্ষ)</span>
+
+          <h3>আবাসিক রেডি প্লট বিক্রয় (কেরানীগঞ্জ)</h3>
+          <p>
+            <i class="fas fa-map-marker-alt" style="color: #e74c3c"></i> দক্ষিণ
+            কেরানীগঞ্জ, ঢাকা (প্রকল্পের প্রধান সড়ক সংলগ্ন)
+          </p>
+
+          <!-- প্লটের মূল ৩/৬টি আকর্ষণীয় পয়েন্ট বা আইকন বক্স -->
+          <div class="amenities-grid">
+            <div class="amenity-card">
+              <i class="fas fa-chart-area"></i>
+              <p>৫ কাঠা জমি</p>
+            </div>
+            <div class="amenity-card">
+              <i class="fas fa-compass"></i>
+              <p>দক্ষিণমুখী</p>
+            </div>
+            <div class="amenity-card">
+              <i class="fas fa-road"></i>
+              <p>২৫ ফিট রাস্তা</p>
+            </div>
+            <div class="amenity-card">
+              <i class="fas fa-bolt"></i>
+              <p>বিদ্যুৎ সুবিধা</p>
+            </div>
+            <div class="amenity-card">
+              <i class="fas fa-tint"></i>
+              <p>পানির লাইন</p>
+            </div>
+            <div class="amenity-card">
+              <i class="fas fa-shield-alt"></i>
+              <p>বাউন্ডারি ওয়াল</p>
+            </div>
+          </div>
+
+          <!-- প্লটের বিস্তারিত তথ্যের ফ্ল্যাট টেবিল -->
+          <h3>প্লটের বিবরণ ও স্পেসিফিকেশন</h3>
+          <table class="plot-specs-table">
+            <tr>
+              <td class="spec-label">প্লট নম্বর</td>
+              <td class="spec-value">পি-১০৪</td>
+            </tr>
+            <tr>
+              <td class="spec-label">ব্লক / সেক্টর</td>
+              <td class="spec-value">ব্লক - সি</td>
+            </tr>
+            <tr>
+              <td class="spec-label">জমির পরিমাণ</td>
+              <td class="spec-value">৫ কাঠা (নিষ্কণ্টক ও রেডি জমি)</td>
+            </tr>
+            <tr>
+              <td class="spec-label">সম্মুখ ভাগ (Facing)</td>
+              <td class="spec-value">দক্ষিণমুখী</td>
+            </tr>
+            <tr>
+              <td class="spec-label">সম্মুখস্থ রাস্তা</td>
+              <td class="spec-value">২৫ ফিট পিচ ঢালাই প্রশস্ত রাস্তা</td>
+            </tr>
+            <tr>
+              <td class="spec-label">জমির ধরন</td>
+              <td class="spec-value">আবাসিক (Highland/উঁচু জমি)</td>
+            </tr>
+            <tr>
+              <td class="spec-label">বর্তমান অবস্থা</td>
+              <td class="spec-value">
+                অবিলম্বে বাড়ি নির্মাণের উপযোগী এবং বাউন্ডারি সম্পন্ন
+              </td>
+            </tr>
+          </table>
+
+          <!-- প্লটের লেআউট ম্যাপ বা নকশা -->
+          <h3>প্রকল্পের নকশা ও প্লট ম্যাপ</h3>
+          <img
+            src="./img/flat/flat-cg.jpg.jpeg"
+            style="width: 100%; border-radius: 4px; border: 1px dashed #7f8c8d"
+            alt="Plot Map"
+          />
+        </div>
+      </section>
+
+      <!-- বুকিং সাইডবার -->
+      <aside>
+        <div class="booking-sidebar">
+          <h3 style="text-align: center; margin-bottom: 15px">
+            প্লট বুকিং ফরম
+          </h3>
+          <form action="https://formspree.io/f/mkndldnj" method="POST">
+            <label>আপনার নাম:</label>
+            <input type="text" name="নাম" required placeholder="নাম লিখুন" />
+
+            <label>phone নম্বর:</label>
+            <input
+              type="tel"
+              name="ফোন_নম্বর"
+              required
+              placeholder="মোবাইল নম্বর"
+            />
+
+            <button type="submit" class="submit-btn">
+              বুকিং রিকোয়েস্ট পাঠান
+            </button>
+          </form>
+
+          <div
+            style="
+              margin-top: 20px;
+              text-align: center;
+              border-top: 1px solid #7f8c8d;
+              padding-top: 15px;
+            "
+          >
+            <p>সরাসরি তথ্যের জন্য কল করুন:</p>
+            <a
+              href="tel:+8801728997118"
+              style="
+                color: #27ae60;
+                font-size: 20px;
+                text-decoration: none;
+                font-weight: bold;
+              "
+              >+৮৮০১৭২৮৯৯৭১১৮</a
+            >
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 marooj real estate. All rights reserved.</p>
+
+      <p>
+        Developed by <i class="fab fa-github"></i
+        ><span>
+          <a href="https://github.com/joy094" target="_blank"
+            >Md. Jakaria</a
+          ></span
+        >
+        <!-- GitHub Icon -->
+        <i class="fab fa-github"></i>
+      </p>
+    </footer>
+
+    <script>
+      const humberger = document.getElementById("humberger");
+      const menu = document.getElementById("menu");
+
+      humberger.addEventListener("click", () => {
+        menu.classList.toggle("show");
+      });
+    </script>
+
+    <script src="form.js"></script>
+  </body>
+</html>
